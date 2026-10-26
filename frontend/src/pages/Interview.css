@@ -1,0 +1,1283 @@
+/* ========================================================= */
+/* IMMERSIVE VIDEO INTERVIEW CONFERENCE ROOM STYLES          */
+/* Google Meet / Zoom / HireVue Real-World Interview Room    */
+/* ========================================================= */
+
+.interview-page {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 16px 20px 40px;
+  color: #0f172a;
+}
+
+/* ========================================================= */
+/* LOBBY / PRE-CALL STYLING                                  */
+/* ========================================================= */
+.lobby-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 90px);
+}
+
+.interview-lobby-card {
+  width: 100%;
+  max-width: 900px;
+  background: white;
+  border-radius: 24px;
+  border: 1px solid #e2e8f0;
+  padding: 36px 40px;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+}
+
+.lobby-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.lobby-badge {
+  display: inline-block;
+  background: #eef2ff;
+  border: 1px solid #c7d2fe;
+  color: #4f46e5;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  padding: 5px 14px;
+  border-radius: 9999px;
+  margin-bottom: 12px;
+}
+
+.lobby-header h1 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 8px 0;
+}
+
+.lobby-header p {
+  font-size: 14.5px;
+  color: #64748b;
+  max-width: 680px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.lobby-preview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.lobby-webcam-box {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  background: #090d16;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 1px solid #1e293b;
+}
+
+.lobby-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lobby-video.mirrored {
+  transform: scaleX(-1);
+}
+
+.lobby-hud-overlay {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.lobby-hud-pill {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(6px);
+  color: white;
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.lobby-info-box {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.lobby-info-box h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+}
+
+.lobby-meta-list {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.lobby-meta-list div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13.5px;
+}
+
+.lobby-meta-list span {
+  color: #64748b;
+}
+
+.lobby-meta-list strong {
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.confidence-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  padding: 12px 14px;
+  border-radius: 10px;
+}
+
+.notice-icon {
+  font-size: 20px;
+}
+
+.confidence-notice p {
+  font-size: 12.5px;
+  color: #166534;
+  margin: 0;
+  line-height: 1.45;
+}
+
+.join-interview-btn {
+  background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
+  color: white;
+  border: none;
+  border-radius: 14px;
+  padding: 16px 24px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 10px 25px rgba(79, 70, 229, 0.35);
+  margin-top: 6px;
+}
+
+.join-interview-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #4338ca 0%, #4f46e5 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(79, 70, 229, 0.45);
+}
+
+.join-interview-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ========================================================= */
+/* ACTIVE VIDEO CONFERENCE ROOM STYLING                      */
+/* ========================================================= */
+.call-room-page {
+  padding-top: 8px;
+}
+
+/* TOP CALL BAR */
+.call-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0f172a;
+  color: white;
+  border-radius: 16px;
+  padding: 12px 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.15);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.call-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.call-live-dot {
+  width: 10px;
+  height: 10px;
+  background: #ef4444;
+  border-radius: 50%;
+  animation: liveBlink 1.4s infinite ease-in-out;
+}
+
+@keyframes liveBlink {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.2); }
+}
+
+.call-title {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: white;
+}
+
+.call-round-pill {
+  background: #1e293b;
+  border: 1px solid #334155;
+  color: #38bdf8;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 9999px;
+}
+
+.call-center-status {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.status-pill {
+  font-size: 12.5px;
+  font-weight: 600;
+  padding: 5px 14px;
+  border-radius: 9999px;
+  background: #1e293b;
+  color: #94a3b8;
+  border: 1px solid #334155;
+}
+
+.status-pill.speaking {
+  background: #1e1b4b;
+  color: #818cf8;
+  border-color: #6366f1;
+  animation: pulseSpeaking 1.5s infinite ease-in-out;
+}
+
+.status-pill.listening {
+  background: #064e3b;
+  color: #34d399;
+  border-color: #059669;
+}
+
+.status-pill.evaluating {
+  background: #451a03;
+  color: #fbbf24;
+  border-color: #d97706;
+}
+
+@keyframes pulseSpeaking {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.4); }
+  50% { box-shadow: 0 0 10px 2px rgba(99, 102, 241, 0.6); }
+}
+
+.call-top-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.voice-speed-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 4px 10px;
+}
+
+.speed-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 0.3px;
+}
+
+.voice-speed-dropdown {
+  background: transparent;
+  color: #f8fafc;
+  border: none;
+  font-size: 11.5px;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+}
+
+.voice-speed-dropdown option {
+  background: #0f172a;
+  color: #f8fafc;
+}
+
+.voice-gender-btn {
+  background: #1e293b;
+  border: 1px solid #334155;
+  color: #cbd5e1;
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.voice-gender-btn:hover {
+  background: #334155;
+  color: white;
+  border-color: #6366f1;
+}
+
+.caption-toggle-btn {
+  background: #1e293b;
+  border: 1px solid #334155;
+  color: #cbd5e1;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.caption-toggle-btn:hover {
+  background: #334155;
+  color: white;
+}
+
+
+/* CONFERENCE VIDEO GRID (50-50 SPLIT) */
+.video-conference-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.video-tile {
+  position: relative;
+  height: 480px;
+  background: #0b0f19;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.25);
+  border: 1px solid #1e293b;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ========================================================= */
+/* TILE 1: AI INTERVIEWER STAGE                              */
+/* ========================================================= */
+.interviewer-tile {
+  background: radial-gradient(circle at center, #1e1b4b 0%, #0b0f19 80%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.interviewer-avatar-stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.ai-interviewer-avatar-glow {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4f46e5 0%, #818cf8 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(79, 70, 229, 0.35);
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.ai-interviewer-avatar-glow.pulsing {
+  animation: avatarVoicePulse 1.2s infinite ease-in-out;
+  box-shadow: 0 0 45px rgba(99, 102, 241, 0.7);
+}
+
+@keyframes avatarVoicePulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+.avatar-graphic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #1e1b4b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-emoji {
+  font-size: 64px;
+}
+
+/* EQUALIZER WAVES */
+.ai-speech-equalizer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 28px;
+  margin-bottom: 14px;
+}
+
+.eq-bar {
+  width: 5px;
+  height: 8px;
+  background: #475569;
+  border-radius: 3px;
+  transition: height 0.15s ease;
+}
+
+.eq-bar.active {
+  background: #818cf8;
+  animation: eqBounce 0.7s infinite ease-in-out;
+}
+
+.eq-bar:nth-child(1) { animation-delay: 0.1s; }
+.eq-bar:nth-child(2) { animation-delay: 0.25s; }
+.eq-bar:nth-child(3) { animation-delay: 0.4s; }
+.eq-bar:nth-child(4) { animation-delay: 0.15s; }
+.eq-bar:nth-child(5) { animation-delay: 0.3s; }
+
+@keyframes eqBounce {
+  0%, 100% { height: 6px; }
+  50% { height: 26px; }
+}
+
+.interviewer-verbal-prompt {
+  color: #94a3b8;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+  max-width: 380px;
+  line-height: 1.45;
+}
+
+/* CAPTIONS OVERLAY */
+.captions-overlay {
+  position: absolute;
+  bottom: 60px;
+  left: 20px;
+  right: 20px;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 12px 16px;
+}
+
+.captions-label {
+  display: block;
+  font-size: 10px;
+  font-weight: 800;
+  color: #38bdf8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.captions-overlay p {
+  color: white;
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* QUICK AUDIO ACTION CONTROLS (SLOW DOWN & REPEAT) */
+.interviewer-quick-controls {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 10;
+}
+
+.ai-action-chip {
+  background: rgba(30, 41, 59, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #e2e8f0;
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.2s ease;
+}
+
+.ai-action-chip.slow-chip {
+  border-color: rgba(245, 158, 11, 0.4);
+  color: #fef3c7;
+}
+
+.ai-action-chip.slow-chip:hover:not(:disabled) {
+  background: rgba(180, 83, 9, 0.9);
+  border-color: #f59e0b;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.ai-action-chip.repeat-chip:hover:not(:disabled) {
+  background: rgba(79, 70, 229, 0.9);
+  border-color: #818cf8;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.ai-action-chip:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ========================================================= */
+/* TILE 2: CANDIDATE WEBCAM VIDEO STAGE                      */
+/* ========================================================= */
+.candidate-tile {
+  background: #000;
+}
+
+.candidate-stream {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.candidate-stream.mirrored {
+  transform: scaleX(-1);
+}
+
+.camera-muted-splash {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #0f172a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  gap: 10px;
+}
+
+.splash-icon {
+  font-size: 48px;
+}
+
+.candidate-hud-top {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  right: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+}
+
+.proctor-live-tag {
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
+  color: white;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.75px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.proctor-dot {
+  width: 6px;
+  height: 6px;
+  background: #ef4444;
+  border-radius: 50%;
+  animation: liveBlink 1.2s infinite ease-in-out;
+}
+
+.hud-metric-pill {
+  background: rgba(16, 185, 129, 0.85);
+  backdrop-filter: blur(6px);
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.candidate-hud-bottom {
+  position: absolute;
+  bottom: 48px;
+  left: 14px;
+  right: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+}
+
+.posture-tag {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(6px);
+  color: #38bdf8;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(56, 189, 248, 0.25);
+}
+
+.mic-live-meter {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(6px);
+  padding: 3px 10px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.meter-label {
+  font-size: 11px;
+  color: #e2e8f0;
+}
+
+.meter-bar-track {
+  width: 65px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.meter-bar-fill {
+  height: 100%;
+  background: #10b981;
+  border-radius: 9999px;
+  transition: width 0.1s linear;
+}
+
+/* VIDEO NAMEPLATES */
+.video-tile-nameplate {
+  position: absolute;
+  bottom: 12px;
+  left: 14px;
+  right: 14px;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nameplate-icon {
+  font-size: 14px;
+}
+
+.nameplate-name {
+  font-size: 12.5px;
+  font-weight: 700;
+}
+
+.nameplate-role {
+  font-size: 11px;
+  color: #94a3b8;
+  margin-left: auto;
+}
+
+.speaking-live-pill {
+  font-size: 11px;
+  font-weight: 700;
+  color: #4ade80;
+  margin-left: auto;
+}
+
+/* ========================================================= */
+/* BOTTOM CALL CONTROLS CONSOLE (DOCK)                       */
+/* ========================================================= */
+.call-controls-dock {
+  background: #0f172a;
+  border-radius: 20px;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  flex-wrap: wrap;
+}
+
+.dock-left,
+.dock-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dock-btn {
+  background: #1e293b;
+  border: 1px solid #334155;
+  color: #e2e8f0;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dock-btn:hover:not(:disabled) {
+  background: #334155;
+  color: white;
+  transform: translateY(-1px);
+}
+
+.dock-btn.muted {
+  background: rgba(220, 38, 38, 0.2);
+  border-color: #ef4444;
+  color: #f87171;
+}
+
+.dock-btn.end-call {
+  background: #ef4444;
+  border-color: #dc2626;
+  color: white;
+}
+
+.dock-btn.end-call:hover {
+  background: #dc2626;
+}
+
+.dock-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* DOCK CENTER: PRIMARY ANSWER / SUBMIT BUTTON */
+.dock-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.listening-prompt-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #1e1b4b;
+  border: 1px solid #6366f1;
+  color: #c7d2fe;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 14px;
+  animation: pulseSpeech 1.4s infinite ease-in-out;
+}
+
+@keyframes pulseSpeech {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.75; }
+}
+
+.finish-speaking-btn {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 13px 28px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.35);
+}
+
+.finish-speaking-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(16, 185, 129, 0.45);
+}
+
+.finish-speaking-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .video-conference-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .video-tile {
+    height: 340px;
+  }
+
+  .lobby-preview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .call-controls-dock {
+    flex-direction: column;
+  }
+
+  .dock-left,
+  .dock-right,
+  .dock-center {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ========================================================= */
+/* COMMUNICATION & SPEAKING CHECK MODAL (QUESTION 1 OVERLAY) */
+/* ========================================================= */
+.comm-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  animation: fadeInModal 0.25s ease-out;
+}
+
+@keyframes fadeInModal {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.comm-diagnostic-card {
+  width: 100%;
+  max-width: 680px;
+  background: white;
+  border-radius: 24px;
+  padding: 32px 36px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+  border: 1px solid #e2e8f0;
+}
+
+.comm-card-badge {
+  display: inline-block;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  color: #1d4ed8;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  margin-bottom: 12px;
+}
+
+.comm-diagnostic-card h2 {
+  font-size: 24px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 6px 0;
+}
+
+.comm-card-subtitle {
+  font-size: 13.5px;
+  color: #64748b;
+  margin: 0 0 20px 0;
+  line-height: 1.45;
+}
+
+.comm-metric-chips-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.comm-chip {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 14px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.chip-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+}
+
+.chip-value {
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.chip-value.text-emerald { color: #059669; }
+.chip-value.text-blue { color: #2563eb; }
+.chip-value.text-indigo { color: #4f46e5; }
+
+.chip-desc {
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+.comm-analysis-narrative {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-left: 4px solid #10b981;
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 14px;
+}
+
+.narrative-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.narrative-title h4 {
+  font-size: 13.5px;
+  font-weight: 800;
+  color: #166534;
+  margin: 0;
+}
+
+.comm-analysis-narrative p {
+  font-size: 13px;
+  color: #14532d;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.comm-improvements-box {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-left: 4px solid #3b82f6;
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 22px;
+}
+
+.improvements-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.improvements-title h4 {
+  font-size: 13.5px;
+  font-weight: 800;
+  color: #1d4ed8;
+  margin: 0;
+}
+
+.comm-improvements-box ul {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 13px;
+  color: #1e3a8a;
+  line-height: 1.55;
+}
+
+.comm-action-row {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.proceed-tech-btn {
+  background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 26px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 16px rgba(79, 70, 229, 0.35);
+}
+
+.proceed-tech-btn:hover {
+  background: linear-gradient(135deg, #4338ca 0%, #4f46e5 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(79, 70, 229, 0.45);
+}
+
+/* Communication Check Badge in Call Top Bar */
+.call-round-pill.comm-check-pill {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  color: white;
+  border-color: #818cf8;
+  font-weight: 800;
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.4);
+}
+
+/* Finish Speaking Button during Communication Check */
+.finish-speaking-btn.comm-action {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  border-color: #34d399;
+  box-shadow: 0 4px 18px rgba(16, 185, 129, 0.4);
+}
+
+.finish-speaking-btn.comm-action:hover {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.5);
+}
+
+/* ========================================================= */
+/* HANDS-FREE VOICE CONTROLS & VAD SILENCE DETECTOR          */
+/* ========================================================= */
+
+.voice-control-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 9999px;
+  padding: 10px 24px;
+  margin: 12px auto;
+  max-width: 820px;
+  color: #e2e8f0;
+  font-size: 13.5px;
+  backdrop-filter: blur(10px);
+}
+
+.voice-pulse-icon {
+  font-size: 16px;
+  animation: pulseGlow 1.8s infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.8; }
+}
+
+.voice-instruction-text strong {
+  color: #818cf8;
+}
+
+.voice-instruction-text em {
+  color: #38bdf8;
+  font-style: normal;
+  background: rgba(56, 189, 248, 0.15);
+  padding: 2px 7px;
+  border-radius: 6px;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+/* Voice Toast Floating on Candidate Tile */
+.voice-toast-pill {
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  padding: 8px 18px;
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+  z-index: 50;
+  animation: slideDownToast 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@keyframes slideDownToast {
+  from { opacity: 0; transform: translate(-50%, -12px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+/* Silence VAD Countdown Badge */
+.silence-vad-badge {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(15, 23, 42, 0.88);
+  border: 1px solid #f59e0b;
+  color: #fef3c7;
+  padding: 6px 16px;
+  border-radius: 9999px;
+  font-size: 12.5px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.35);
+  z-index: 45;
+  animation: pulseBadge 1.2s infinite;
+}
+
+@keyframes pulseBadge {
+  0%, 100% { transform: translate(-50%, 0) scale(1); }
+  50% { transform: translate(-50%, 0) scale(1.03); }
+}
+
+.silence-vad-badge strong {
+  color: #fbbf24;
+}
+
+.silence-vad-badge em {
+  color: #38bdf8;
+  font-style: normal;
+}
+
+.cancel-vad-btn {
+  background: #dc2626;
+  color: #ffffff;
+  border: none;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-left: 6px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.cancel-vad-btn:hover {
+  background: #b91c1c;
+  transform: scale(1.05);
+}
+
+.dock-btn.auto-on {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: #10b981;
+  color: #34d399;
+}
+
+/* Executive Card Styling */
+.executive-card {
+  max-width: 740px !important;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 25px 70px rgba(15, 23, 42, 0.25);
+}
+
+.executive-grid {
+  grid-template-columns: repeat(4, 1fr) !important;
+}
+
+.chip-value.text-purple {
+  color: #8b5cf6;
+}
+
+.grammar-vocab-sub {
+  margin-top: 8px !important;
+  font-size: 12.5px !important;
+  color: #166534 !important;
+  border-top: 1px dashed rgba(22, 101, 52, 0.2);
+  padding-top: 6px;
+}
+
+/* Step 1 Auto Countdown Progress Bar */
+.step-one-countdown-strip {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+}
+
+.countdown-text-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12.5px;
+  color: #475569;
+  margin-bottom: 8px;
+}
+
+.countdown-text-row strong {
+  color: #4f46e5;
+}
+
+.countdown-text-row .voice-tip {
+  color: #64748b;
+  font-size: 11.5px;
+}
+
+.countdown-text-row .voice-tip em {
+  color: #2563eb;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.countdown-track {
+  width: 100%;
+  height: 6px;
+  background: #e2e8f0;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.countdown-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4f46e5 0%, #06b6d4 100%);
+  border-radius: 9999px;
+  transition: width 1s linear;
+}
